@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | Shanti Niketan Public School</title>
+
+    <!-- Bootstrap 4.6 -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <!-- Student Dashboard CSS -->
+    <link rel="stylesheet" href="CSS/studentDashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="school-logo">
+
+            <div class="logo-circle">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <div class="school-name">
+                <h4>Shanti Niketan</h4>
+                <span>Public School</span>
+            </div>
+
+        </div>
+
+        <div class="student-mini-profile">
+
+            <div class="student-avatar">
+                <img src="Image/student.png" alt="Student">
+            </div>
+
+            <div>
+                <h6>Rahul Kumar</h6>
+                <small>Class X - A</small>
+            </div>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="#" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="profile">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="classes">
+                    <i class="fas fa-book-open"></i>
+                    <span>My Classes</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="attendance">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Attendance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="timetable">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Timetable</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="assignments">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="exams">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Examinations</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="materials">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Study Materials</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="notices">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Notices</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="messages">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="leave">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Leave Application</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="fees">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Fees</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-logout">
+
+            <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div>
+                    <h3 id="pageTitle">Student Dashboard</h3>
+                    <p id="pageSubtitle">
+                        Welcome back, Rahul!
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i class="fas fa-search"></i>
+
+                    <input type="text"
+                        id="globalSearch"
+                        placeholder="Search...">
+
+                </div>
+
+
+                <button class="notification-btn" id="notificationBtn">
+
+                    <i class="fas fa-bell"></i>
+
+                    <span class="notification-count">
+                        4
+                    </span>
+
+                </button>
+
+
+                <div class="profile-dropdown">
+
+                    <button class="profile-btn" id="profileDropdownBtn">
+
+                        <img src="Image/student.png"
+                            alt="Student">
+
+                        <div>
+                            <strong>Rahul Kumar</strong>
+                            <small>Student</small>
+                        </div>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="profile-menu" id="profileMenu">
+
+                        <a href="#" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            My Profile
+                        </a>
+
+                        <a href="#" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+
+                        <a href="#" id="profileLogout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTAINER ================= -->
+
+        <div class="dashboard-container">
+
+
+            <!-- ================= DASHBOARD SECTION ================= -->
+
+            <section class="dashboard-section active-section"
+                id="dashboard">
+
+                <div class="welcome-banner">
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-small">
+                            Welcome Back!
+                        </span>
+
+                        <h2>Good Morning, Rahul 👋</h2>
+
+                        <p>
+                            Stay focused, keep learning and make
+                            today productive.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- STAT CARDS -->
+
+                <div class="row">
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon blue">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+
+                            <div class="stat-info">
+
+                                <span>Attendance</span>
+
+                                <h3>92%</h3>
+
+                                <small class="positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    3% this month
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon green">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+
+                            <div class="stat-info">
+
+                                <span>Assignments</span>
+
+                                <h3>08</h3>
+
+                                <small>
+                                    3 pending
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon orange">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+
+                            <div class="stat-info">
+
+                                <span>Upcoming Exams</span>
+
+                                <h3>04</h3>
+
+                                <small>
+                                    Next: Mathematics
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon purple">
+                                <i class="fas fa-book"></i>
+                            </div>
+
+                            <div class="stat-info">
+
+                                <span>Subjects</span>
+
+                                <h3>06</h3>
+
+                                <small>
+                                    Current session
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD GRID -->
+
+                <div class="row">
+
+
+                    <!-- TODAY'S CLASS -->
+
+                    <div class="col-lg-8 mb-4">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>
+                                        Today's Classes
+                                    </h5>
+
+                                    <p>
+                                        Thursday, 01 October 2026
+                                    </p>
+                                </div>
+
+                                <button class="view-all"
+                                    data-section="timetable">
+                                    View Timetable
+                                </button>
+
+                            </div>
+
+
+                            <div class="class-list">
+
+                                <div class="class-item">
+
+                                    <div class="class-time">
+                                        <strong>08:00</strong>
+                                        <span>09:00 AM</span>
+                                    </div>
+
+                                    <div class="class-icon math">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+
+                                    <div class="class-details">
+
+                                        <h6>Mathematics</h6>
+
+                                        <p>
+                                            <i class="fas fa-user"></i>
+                                            Mr. Rajesh Kumar
+                                        </p>
+
+                                        <span>
+                                            Room 101
+                                        </span>
+
+                                    </div>
+
+                                    <span class="class-status active">
+                                        Ongoing
+                                    </span>
+
+                                </div>
+
+
+                                <div class="class-item">
+
+                                    <div class="class-time">
+                                        <strong>09:00</strong>
+                                        <span>10:00 AM</span>
+                                    </div>
+
+                                    <div class="class-icon science">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+
+                                    <div class="class-details">
+
+                                        <h6>Science</h6>
+
+                                        <p>
+                                            <i class="fas fa-user"></i>
+                                            Mrs. Priya Sharma
+                                        </p>
+
+                                        <span>
+                                            Lab 01
+                                        </span>
+
+                                    </div>
+
+                                    <span class="class-status upcoming">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+
+                                <div class="class-item">
+
+                                    <div class="class-time">
+                                        <strong>10:30</strong>
+                                        <span>11:30 AM</span>
+                                    </div>
+
+                                    <div class="class-icon english">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+
+                                    <div class="class-details">
+
+                                        <h6>English</h6>
+
+                                        <p>
+                                            <i class="fas fa-user"></i>
+                                            Mrs. Sunita Singh
+                                        </p>
+
+                                        <span>
+                                            Room 104
+                                        </span>
+
+                                    </div>
+
+                                    <span class="class-status upcoming">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+
+                                <div class="class-item">
+
+                                    <div class="class-time">
+                                        <strong>11:30</strong>
+                                        <span>12:30 PM</span>
+                                    </div>
+
+                                    <div class="class-icon social">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+
+                                    <div class="class-details">
+
+                                        <h6>Social Science</h6>
+
+                                        <p>
+                                            <i class="fas fa-user"></i>
+                                            Mr. Amit Singh
+                                        </p>
+
+                                        <span>
+                                            Room 102
+                                        </span>
+
+                                    </div>
+
+                                    <span class="class-status upcoming">
+                                        Upcoming
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ATTENDANCE -->
+
+                    <div class="col-lg-4 mb-4">
+
+                        <div class="dashboard-card attendance-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Attendance</h5>
+                                    <p>This Academic Year</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="attendance-circle">
+
+                                <div class="circle-progress">
+
+                                    <span>92%</span>
+
+                                    <small>
+                                        Attendance
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="attendance-summary">
+
+                                <div>
+                                    <span class="present-dot"></span>
+                                    Present
+                                    <strong>184</strong>
+                                </div>
+
+                                <div>
+                                    <span class="absent-dot"></span>
+                                    Absent
+                                    <strong>16</strong>
+                                </div>
+
+                            </div>
+
+
+                            <button class="full-width-btn"
+                                data-section="attendance">
+                                View Attendance
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECOND ROW -->
+
+                <div class="row">
+
+
+                    <!-- ASSIGNMENTS -->
+
+                    <div class="col-lg-7 mb-4">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Recent Assignments</h5>
+                                    <p>Your latest assignments</p>
+                                </div>
+
+                                <button class="view-all"
+                                    data-section="assignments">
+                                    View All
+                                </button>
+
+                            </div>
+
+
+                            <div class="assignment-list">
+
+                                <div class="assignment-item">
+
+                                    <div class="assignment-icon">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+
+                                    <div class="assignment-details">
+
+                                        <h6>Quadratic Equations</h6>
+
+                                        <p>
+                                            Mathematics
+                                        </p>
+
+                                        <small>
+                                            Due: 05 Oct 2026
+                                        </small>
+
+                                    </div>
+
+                                    <span class="badge pending">
+                                        Pending
+                                    </span>
+
+                                </div>
+
+
+                                <div class="assignment-item">
+
+                                    <div class="assignment-icon">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+
+                                    <div class="assignment-details">
+
+                                        <h6>Chemical Reactions</h6>
+
+                                        <p>
+                                            Science
+                                        </p>
+
+                                        <small>
+                                            Due: 07 Oct 2026
+                                        </small>
+
+                                    </div>
+
+                                    <span class="badge submitted">
+                                        Submitted
+                                    </span>
+
+                                </div>
+
+
+                                <div class="assignment-item">
+
+                                    <div class="assignment-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+
+                                    <div class="assignment-details">
+
+                                        <h6>English Essay</h6>
+
+                                        <p>
+                                            English
+                                        </p>
+
+                                        <small>
+                                            Due: 09 Oct 2026
+                                        </small>
+
+                                    </div>
+
+                                    <span class="badge pending">
+                                        Pending
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTICES -->
+
+                    <div class="col-lg-5 mb-4">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Latest Notices</h5>
+                                    <p>School announcements</p>
+                                </div>
+
+                                <button class="view-all"
+                                    data-section="notices">
+                                    View All
+                                </button>
+
+                            </div>
+
+
+                            <div class="notice-list">
+
+                                <div class="notice-item">
+
+                                    <div class="notice-date">
+                                        <strong>05</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>Half Yearly Examination</h6>
+                                        <p>
+                                            Examination schedule
+                                            has been published.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+                                    <div class="notice-date">
+                                        <strong>10</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>Sports Day</h6>
+                                        <p>
+                                            Annual sports day
+                                            registration is open.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+                                    <div class="notice-date">
+                                        <strong>15</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>Parent Teacher Meeting</h6>
+                                        <p>
+                                            PTM will be conducted
+                                            in the school auditorium.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <section class="dashboard-section" id="profile">
+
+                <div class="section-heading">
+                    <h4>My Profile</h4>
+                    <p>View and manage your personal information.</p>
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-cover"></div>
+
+                    <div class="profile-main">
+
+                        <div class="large-avatar">
+                            <img src="Image/student.png"
+                                alt="Student">
+                        </div>
+
+                        <div class="profile-name">
+
+                            <h3>Rahul Kumar</h3>
+
+                            <p>
+                                Student | Class X - A
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-information">
+
+                        <div class="info-box">
+                            <span>Student ID</span>
+                            <strong>SNPS20261025</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Class</span>
+                            <strong>X - A</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Roll Number</span>
+                            <strong>25</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Date of Birth</span>
+                            <strong>15 May 2011</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Email</span>
+                            <strong>rahul@example.com</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Phone</span>
+                            <strong>9876543210</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Father's Name</span>
+                            <strong>Mr. Ramesh Kumar</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Mother's Name</span>
+                            <strong>Mrs. Sunita Kumar</strong>
+                        </div>
+
+                        <div class="info-box full">
+                            <span>Address</span>
+                            <strong>
+                                Patna, Bihar, India
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CLASSES ================= -->
+
+            <section class="dashboard-section" id="classes">
+
+                <div class="section-heading">
+                    <h4>My Classes</h4>
+                    <p>Subjects and teachers for your class.</p>
+                </div>
+
+
+                <div class="subject-grid">
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon math">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+
+                        <h5>Mathematics</h5>
+                        <p>Mr. Rajesh Kumar</p>
+
+                        <span>
+                            Room 101
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon science">
+                            <i class="fas fa-flask"></i>
+                        </div>
+
+                        <h5>Science</h5>
+                        <p>Mrs. Priya Sharma</p>
+
+                        <span>
+                            Lab 01
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon english">
+                            <i class="fas fa-language"></i>
+                        </div>
+
+                        <h5>English</h5>
+                        <p>Mrs. Sunita Singh</p>
+
+                        <span>
+                            Room 104
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon social">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                        <h5>Social Science</h5>
+                        <p>Mr. Amit Singh</p>
+
+                        <span>
+                            Room 102
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon hindi">
+                            <i class="fas fa-book"></i>
+                        </div>
+
+                        <h5>Hindi</h5>
+                        <p>Mrs. Neha Kumari</p>
+
+                        <span>
+                            Room 103
+                        </span>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon computer">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+
+                        <h5>Computer</h5>
+                        <p>Mr. Vikash Kumar</p>
+
+                        <span>
+                            Computer Lab
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ATTENDANCE ================= -->
+
+            <section class="dashboard-section" id="attendance">
+
+                <div class="section-heading">
+                    <h4>Attendance</h4>
+                    <p>Track your attendance throughout the academic year.</p>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <div class="attendance-big-card">
+
+                            <div class="big-circle">
+                                <span>92%</span>
+                            </div>
+
+                            <h5>Overall Attendance</h5>
+
+                            <p>
+                                Your attendance is above the
+                                required percentage.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-8">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Subject Attendance</h5>
+                                </div>
+
+                            </div>
+
+
+                            <div class="table-responsive">
+
+                                <table class="custom-table">
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Total Classes</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Percentage</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>40</td>
+                                            <td>38</td>
+                                            <td>2</td>
+                                            <td>
+                                                <span class="percentage good">
+                                                    95%
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>38</td>
+                                            <td>35</td>
+                                            <td>3</td>
+                                            <td>
+                                                <span class="percentage good">
+                                                    92%
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>English</td>
+                                            <td>35</td>
+                                            <td>33</td>
+                                            <td>2</td>
+                                            <td>
+                                                <span class="percentage good">
+                                                    94%
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Social Science</td>
+                                            <td>37</td>
+                                            <td>33</td>
+                                            <td>4</td>
+                                            <td>
+                                                <span class="percentage good">
+                                                    89%
+                                                </span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TIMETABLE ================= -->
+
+            <section class="dashboard-section" id="timetable">
+
+                <div class="section-heading">
+                    <h4>Class Timetable</h4>
+                    <p>Your weekly class schedule.</p>
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="table-responsive">
+
+                        <table class="custom-table timetable-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>08:00 - 09:00</strong>
+                                    </td>
+
+                                    <td>Mathematics</td>
+                                    <td>Science</td>
+                                    <td>English</td>
+                                    <td>Mathematics</td>
+                                    <td>Hindi</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>09:00 - 10:00</strong>
+                                    </td>
+
+                                    <td>Science</td>
+                                    <td>Mathematics</td>
+                                    <td>Computer</td>
+                                    <td>Science</td>
+                                    <td>English</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>10:30 - 11:30</strong>
+                                    </td>
+
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                    <td>Mathematics</td>
+                                    <td>English</td>
+                                    <td>Science</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>11:30 - 12:30</strong>
+                                    </td>
+
+                                    <td>Social Science</td>
+                                    <td>Hindi</td>
+                                    <td>Science</td>
+                                    <td>Computer</td>
+                                    <td>Mathematics</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>01:30 - 02:30</strong>
+                                    </td>
+
+                                    <td>Computer</td>
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                    <td>Hindi</td>
+                                    <td>Computer</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ASSIGNMENTS ================= -->
+
+            <section class="dashboard-section" id="assignments">
+
+                <div class="section-heading">
+
+                    <h4>Assignments</h4>
+
+                    <p>
+                        View your assignments and submission status.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="table-responsive">
+
+                        <table class="custom-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Assignment</th>
+                                    <th>Subject</th>
+                                    <th>Assigned Date</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Quadratic Equations
+                                    </td>
+
+                                    <td>Mathematics</td>
+
+                                    <td>28 Sep 2026</td>
+
+                                    <td>05 Oct 2026</td>
+
+                                    <td>
+                                        <span class="badge pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-btn view-btn">
+                                            View
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Chemical Reactions
+                                    </td>
+
+                                    <td>Science</td>
+
+                                    <td>27 Sep 2026</td>
+
+                                    <td>07 Oct 2026</td>
+
+                                    <td>
+                                        <span class="badge submitted">
+                                            Submitted
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-btn view-btn">
+                                            View
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        English Essay
+                                    </td>
+
+                                    <td>English</td>
+
+                                    <td>30 Sep 2026</td>
+
+                                    <td>09 Oct 2026</td>
+
+                                    <td>
+                                        <span class="badge pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-btn view-btn">
+                                            View
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= EXAMINATIONS ================= -->
+
+            <section class="dashboard-section" id="exams">
+
+                <div class="section-heading">
+
+                    <h4>Examinations & Marks</h4>
+
+                    <p>
+                        View examination schedule and academic performance.
+                    </p>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-4">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Upcoming Examinations</h5>
+                                </div>
+
+                            </div>
+
+
+                            <div class="exam-list">
+
+                                <div class="exam-item">
+
+                                    <div class="exam-date">
+                                        <strong>05</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>Mathematics</h6>
+                                        <p>09:00 AM - 12:00 PM</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="exam-item">
+
+                                    <div class="exam-date">
+                                        <strong>07</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>Science</h6>
+                                        <p>09:00 AM - 12:00 PM</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="exam-item">
+
+                                    <div class="exam-date">
+                                        <strong>09</strong>
+                                        <span>OCT</span>
+                                    </div>
+
+                                    <div>
+                                        <h6>English</h6>
+                                        <p>09:00 AM - 12:00 PM</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-4">
+
+                        <div class="dashboard-card">
+
+                            <div class="card-header-custom">
+
+                                <div>
+                                    <h5>Recent Results</h5>
+                                </div>
+
+                            </div>
+
+
+                            <div class="result-list">
+
+                                <div class="result-row">
+
+                                    <span>Mathematics</span>
+                                    <strong>88 / 100</strong>
+
+                                </div>
+
+                                <div class="result-row">
+
+                                    <span>Science</span>
+                                    <strong>84 / 100</strong>
+
+                                </div>
+
+                                <div class="result-row">
+
+                                    <span>English</span>
+                                    <strong>91 / 100</strong>
+
+                                </div>
+
+                                <div class="result-row">
+
+                                    <span>Social Science</span>
+                                    <strong>86 / 100</strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STUDY MATERIALS ================= -->
+
+            <section class="dashboard-section" id="materials">
+
+                <div class="section-heading">
+
+                    <h4>Study Materials</h4>
+
+                    <p>
+                        Access notes, PDFs and learning resources.
+                    </p>
+
+                </div>
+
+
+                <div class="material-grid">
+
+                    <div class="material-card">
+
+                        <div class="material-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+
+                            <h5>Mathematics Notes</h5>
+
+                            <p>
+                                Quadratic Equations
+                            </p>
+
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+
+                            <h5>Science Notes</h5>
+
+                            <p>
+                                Chemical Reactions
+                            </p>
+
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+
+                            <h5>English Grammar</h5>
+
+                            <p>
+                                Grammar Notes
+                            </p>
+
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+
+                            <h5>Social Science</h5>
+
+                            <p>
+                                History Notes
+                            </p>
+
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= NOTICES ================= -->
+
+            <section class="dashboard-section" id="notices">
+
+                <div class="section-heading">
+
+                    <h4>School Notices</h4>
+
+                    <p>
+                        Important announcements from school administration.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="notice-full">
+
+                        <div class="notice-date">
+                            <strong>05</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Half Yearly Examination
+                            </h5>
+
+                            <p>
+                                The half yearly examination schedule
+                                has been published. Students are advised
+                                to check the examination timetable.
+                            </p>
+
+                            <small>
+                                Posted by School Administration
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice-full">
+
+                        <div class="notice-date">
+                            <strong>10</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Annual Sports Day
+                            </h5>
+
+                            <p>
+                                Students interested in participating
+                                in sports events can register through
+                                the school office.
+                            </p>
+
+                            <small>
+                                Posted by Sports Department
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice-full">
+
+                        <div class="notice-date">
+                            <strong>15</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Parent Teacher Meeting
+                            </h5>
+
+                            <p>
+                                Parent Teacher Meeting will be held
+                                in the school auditorium.
+                            </p>
+
+                            <small>
+                                Posted by Administration
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MESSAGES ================= -->
+
+            <section class="dashboard-section" id="messages">
+
+                <div class="section-heading">
+
+                    <h4>Messages</h4>
+
+                    <p>
+                        Messages from teachers and school administration.
+                    </p>
+
+                </div>
+
+
+                <div class="message-list">
+
+                    <div class="message-card">
+
+                        <div class="message-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+
+                        <div class="message-content">
+
+                            <h5>Mr. Rajesh Kumar</h5>
+
+                            <span>
+                                Mathematics Teacher
+                            </span>
+
+                            <p>
+                                Please complete the quadratic equations
+                                assignment before Monday.
+                            </p>
+
+                        </div>
+
+                        <small>
+                            Today
+                        </small>
+
+                    </div>
+
+
+                    <div class="message-card">
+
+                        <div class="message-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+
+                        <div class="message-content">
+
+                            <h5>Mrs. Priya Sharma</h5>
+
+                            <span>
+                                Science Teacher
+                            </span>
+
+                            <p>
+                                Please bring your science practical
+                                notebook tomorrow.
+                            </p>
+
+                        </div>
+
+                        <small>
+                            Yesterday
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= LEAVE ================= -->
+
+            <section class="dashboard-section" id="leave">
+
+                <div class="section-heading">
+
+                    <h4>Leave Application</h4>
+
+                    <p>
+                        Submit and track your leave applications.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <form id="leaveForm">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        From Date
+                                    </label>
+
+                                    <input type="date"
+                                        class="form-control"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        To Date
+                                    </label>
+
+                                    <input type="date"
+                                        class="form-control"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Reason
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        rows="5"
+                                        placeholder="Enter reason for leave..."
+                                        required></textarea>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-12">
+
+                                <button type="submit"
+                                    class="primary-btn">
+
+                                    <i class="fas fa-paper-plane"></i>
+
+                                    Submit Application
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FEES ================= -->
+
+            <section class="dashboard-section" id="fees">
+
+                <div class="section-heading">
+
+                    <h4>Fee Details</h4>
+
+                    <p>
+                        View your current fee status.
+                    </p>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <div class="fee-card">
+
+                            <span>
+                                Total Fees
+                            </span>
+
+                            <h3>
+                                ₹45,000
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="fee-card paid">
+
+                            <span>
+                                Paid
+                            </span>
+
+                            <h3>
+                                ₹35,000
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="fee-card due">
+
+                            <span>
+                                Due
+                            </span>
+
+                            <h3>
+                                ₹10,000
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card mt-4">
+
+                    <div class="table-responsive">
+
+                        <table class="custom-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th>Amount</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>Tuition Fee</td>
+                                    <td>₹25,000</td>
+                                    <td>30 Sep 2026</td>
+
+                                    <td>
+                                        <span class="badge submitted">
+                                            Paid
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>Transport Fee</td>
+                                    <td>₹10,000</td>
+                                    <td>30 Sep 2026</td>
+
+                                    <td>
+                                        <span class="badge submitted">
+                                            Paid
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>Activity Fee</td>
+                                    <td>₹10,000</td>
+                                    <td>15 Oct 2026</td>
+
+                                    <td>
+                                        <span class="badge pending">
+                                            Due
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SETTINGS ================= -->
+
+            <section class="dashboard-section" id="settings">
+
+                <div class="section-heading">
+
+                    <h4>Settings</h4>
+
+                    <p>
+                        Manage your dashboard preferences.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card settings-card">
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h5>Email Notifications</h5>
+
+                            <p>
+                                Receive important school notifications
+                                through email.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox" checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h5>Assignment Notifications</h5>
+
+                            <p>
+                                Get notified when new assignments are added.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox" checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h5>Exam Notifications</h5>
+
+                            <p>
+                                Receive examination reminders.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox">
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Shanti Niketan Public School.
+                All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= NOTIFICATION PANEL ================= -->
+
+    <div class="notification-panel" id="notificationPanel">
+
+        <div class="notification-header">
+
+            <h5>Notifications</h5>
+
+            <button id="closeNotification">
+                <i class="fas fa-times"></i>
+            </button>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fas fa-tasks"></i>
+
+            <div>
+                <strong>New Assignment</strong>
+                <p>Mathematics assignment added.</p>
+                <small>10 minutes ago</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fas fa-bullhorn"></i>
+
+            <div>
+                <strong>New Notice</strong>
+                <p>Half yearly exam schedule published.</p>
+                <small>1 hour ago</small>
+            </div>
+
+        </div>
+
+
+        <div class="notification-item">
+
+            <i class="fas fa-calendar"></i>
+
+            <div>
+                <strong>PTM Reminder</strong>
+                <p>Parent Teacher Meeting on 15 Oct.</p>
+                <small>Yesterday</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LOGOUT MODAL ================= -->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-box">
+
+            <div class="logout-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+
+            <h4>Logout?</h4>
+
+            <p>
+                Are you sure you want to logout?
+            </p>
+
+            <div class="logout-actions">
+
+                <button id="cancelLogout"
+                    class="cancel-btn">
+                    Cancel
+                </button>
+
+                <button id="confirmLogout"
+                    class="logout-confirm">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JQUERY ================= -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Student Dashboard JS -->
+    <script src="JS/studentDashboard.js"></script>
+
+</body>
+</html>
